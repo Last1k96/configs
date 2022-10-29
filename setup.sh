@@ -19,6 +19,7 @@ mkdir -p $CONFIG_DIR
 cp -r ./zsh $CONFIG_DIR
 cp -r ./p10k $CONFIG_DIR
 
+echo "Changing default shell to zsh..."
 chsh -s $(which zsh)
 
 echo "Please reboot the PC"
