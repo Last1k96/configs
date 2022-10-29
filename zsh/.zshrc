@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # source "$HOME/.config/zsh/.zshrc"
 export ZDOTDIR=$HOME/.config/zsh
 
