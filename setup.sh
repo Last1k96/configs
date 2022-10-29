@@ -10,7 +10,7 @@ sudo apt install zsh git fonts-font-awesome
 export CONFIG_DIR=$HOME/.config
 export PROGRAMS_DIR=$HOME/programs
 
-echo "#\!/bin/sh\n\nsource \"$CONFIG_DIR/.config/zsh/.zshrc\"" > $HOME/.zshrc
+echo -e "#!/bin/sh\n\nsource \"$CONFIG_DIR/zsh/.zshrc\"" > $HOME/.zshrc
 
 mkdir -p $PROGRAMS_DIR
 [[ ! -d $PROGRAMS_DIR/powerlevel10k ]] && git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $PROGRAMS_DIR/powerlevel10k
