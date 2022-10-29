@@ -1,6 +1,6 @@
-# export ZDOTDIR=$HOME/.config/zsh
-# source "$HOME/.config/zsh/.zshrc"
 #!/bin/sh
+# source "$HOME/.config/zsh/.zshrc"
+export ZDOTDIR=$HOME/.config/zsh
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -9,12 +9,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source ~/apps/powerlevel10k/powerlevel10k.zsh-theme
+source ~/programs/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit /tmp/vscode-zsh/.p10k.zsh.
-[[ ! -f /tmp/vscode-zsh/.p10k.zsh ]] || source /tmp/vscode-zsh/.p10k.zsh
-
-export ZDOTDIR=$HOME/.config/zsh
+[[ ! -f $HOME/.config/p10k/.p10k.zsh ]] || source $HOME/.config/p10k/.p10k.zsh
 
 # Ctrl + left/right workaround
 # https://unix.stackexchange.com/questions/58870/ctrl-left-right-arrow-keys-issue

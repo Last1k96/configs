@@ -1,8 +1,9 @@
 #!/bin/sh
 
 # History
-HISTFILE=ZDOTDIR/.zsh_history
+HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=999999999
 SAVEHIST=$HISTSIZE
 
 export PATH="$HOME/.local/bin":$PATH
+export EDITOR=code
