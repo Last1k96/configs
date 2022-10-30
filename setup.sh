@@ -16,13 +16,16 @@ export NAME="Maxim Kurin"
 
 echo "CONFIG_DIR=$CONFIG_DIR"
 echo "PROGRAMS_DIR=$PROGRAMS_DIR"
+echo "EMAIL=$EMAIL"
+echo "NAME=$NAME"
 
 echo "Setup git"
-git config --global user.name $NAME
-git config --global user.email $EMAIL
+git config --global user.name "$NAME"
+git config --global user.email "$EMAIL"
 git config --global alias.ch checkout
 git config --global alias.br branch
 git config --global alias.st status
+git config --global alias.amend "commit --amend --no-edit"
 
 echo "Set default .zshrc to source from config directory"
 echo -e "#!/bin/sh\n\nsource \"$CONFIG_DIR/zsh/.zshrc\"" > $HOME/.zshrc
@@ -35,6 +38,7 @@ echo "Copy configs"
 mkdir -p $CONFIG_DIR
 cp -r ./zsh $CONFIG_DIR
 cp -r ./p10k $CONFIG_DIR
+cp -r ./mc $CONFIG_DIR
 
 echo "Changing default shell to zsh..."
 chsh -s $(which zsh)
