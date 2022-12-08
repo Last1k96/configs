@@ -50,6 +50,9 @@ ssh-add ~/.ssh/id_ed25519
 echo "ssh public key:"
 cat ~/.ssh/id_ed25519.pub
 
+echo "Copying git config"
+cp .gitconfig ~/
+
 # install MesloLGS NF
 # https://github.com/romkatv/powerlevel10k#fonts
 
