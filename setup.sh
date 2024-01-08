@@ -6,8 +6,8 @@ set -e
 echo "Install all essential libraries"
 sudo apt update && sudo apt upgrade -y
 sudo apt install zsh git fonts-font-awesome
-sudo apt install -y build-essential libssl-dev checkinstall zlib1g-dev ninja-build gdb cmake-curses-gui linux-tools-common cppcheck clang-format clang-tidy ccache pipx tar curl zip unzip mc git python3-pip
-
+sudo apt install -y build-essential libssl-dev checkinstall zlib1g-dev ninja-build gdb cmake-curses-gui linux-tools-common cppcheck clang-format clang-tidy ccache pipx tar curl zip unzip mc git python3-pip nfs-common cifs-utils git-lfs
+sudo apt install -y autoconf flex bison libtbb-dev libusb-1.0-0-dev libtool patchelf
 echo "Configs:"
 export CONFIG_DIR=$HOME/.config
 export PROGRAMS_DIR=$HOME/programs
